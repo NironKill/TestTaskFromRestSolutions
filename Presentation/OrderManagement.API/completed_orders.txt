@@ -1,0 +1,10 @@
+Time: 10/4/2024 3:50:10 PM, Id: acabf833-d375-4e50-943f-0efb10132fcc, CustomerName: Cool, TotalAmount: 1000 USD, TotalAmountInBaseCurrency: 1000 USD
+Time: 10/4/2024 3:50:10 PM, Id: 1a3dd84c-e429-423d-8974-f6a93d921bf2, CustomerName: One, TotalAmount: 100 USD, TotalAmountInBaseCurrency: 100 USD
+Time: 10/4/2024 3:55:10 PM, Id: e8da0b50-e592-4d76-85ca-d621eb5e56a0, CustomerName: Cool, TotalAmount: 1000 EUR, TotalAmountInBaseCurrency: 1105 USD
+Time: 10/4/2024 3:55:10 PM, Id: 930d2c56-7b1b-46d4-8f4b-7b0da6793b53, CustomerName: Cool, TotalAmount: 1000 BYN, TotalAmountInBaseCurrency: 306 USD
+Time: 10/4/2024 3:55:10 PM, Id: fa9edbf2-efd8-44a0-b9c2-f9322791545f, CustomerName: Cool, TotalAmount: 1000 PLN, TotalAmountInBaseCurrency: 257 USD
+Time: 10/4/2024 3:55:10 PM, Id: 5310a3d8-7c4c-4ea6-a6a1-018f2462178d, CustomerName: One, TotalAmount: 100 EUR, TotalAmountInBaseCurrency: 111 USD
+Time: 10/4/2024 3:55:10 PM, Id: c7dd1a72-2836-429f-8e54-2574a7b89f7b, CustomerName: One, TotalAmount: 100 BYN, TotalAmountInBaseCurrency: 31 USD
+Time: 10/4/2024 3:55:10 PM, Id: 02da01f2-9c7e-4a9d-a7cd-7cbb4b49003c, CustomerName: One, TotalAmount: 100 PLN, TotalAmountInBaseCurrency: 26 USD
+Time: 10/4/2024 3:55:10 PM, Id: 3d62eeab-a4e4-44f7-8ca8-e16b3218bb28, CustomerName: Cool, TotalAmount: 1000 RUB, TotalAmountInBaseCurrency: 11 USD
+Time: 10/4/2024 3:55:10 PM, Id: 95c27a0c-0dd8-425c-8e48-e2a43d8699a3, CustomerName: One, TotalAmount: 100 RUB, TotalAmountInBaseCurrency: 2 USD

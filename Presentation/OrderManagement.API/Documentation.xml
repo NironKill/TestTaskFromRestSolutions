@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OrderManagement.API</name>
+    </assembly>
+    <members>
+        <member name="M:OrderManagement.API.Controllers.OrderController.Create(OrderManagement.Application.Requests.Orders.Write.Create.CreateOrderDTO)">
+            <summary>
+            Creates the order
+            </summary>
+            <remarks>
+            Sample request:
+            POST /order/Create
+            {
+            
+                customerName: "customer name",
+                totalAmount: "order amount"
+                currency: "order currency (USD, EUR, BYN, RUB, PLN)"
+            }
+            </remarks>
+            <param name="dto">CreateOrderDTO object</param>
+            <returns>Returns CreateOrderResponse</returns>
+            <response code="201">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.Put(OrderManagement.Application.Requests.Orders.Write.Put.PutOrderDTO,System.Guid)">
+            <summary>
+            Customer name update
+            </summary>
+            <remarks>
+            Sample request:
+            PUT /order/Put/bd36fda0-37f4-4dd4-8cb0-c223847ef691
+            {
+            
+                customerName: "customer name",
+            }
+            </remarks>
+            <param name="dto">PutOrderDTO object</param>
+            <param name="id">Order id (guid)</param>
+            <returns>Returns PutOrderResponse</returns>
+            <response code="200">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+            <response code="404">The server can not find the requested resource.</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.Patch(System.Guid)">
+            <summary>
+            Change order status to cancelled
+            </summary>
+            <remarks>
+            Sample request:
+            PATCH /order/Patch/bd36fda0-37f4-4dd4-8cb0-c223847ef691
+            </remarks>
+            <param name="id">Order id (guid)</param>
+            <returns>Returns PatchOrderResponse</returns>
+            <response code="200">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+            <response code="404">The server can not find the requested resource.</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.Delete(System.Guid)">
+            <summary>
+            Delete the order
+            </summary>
+            <remarks>
+            Sample request:
+            DELETE /order/Delete/bd36fda0-37f4-4dd4-8cb0-c223847ef691
+            </remarks>
+            <param name="id">Order id (guid)</param>
+            <returns>Returns DeleteOrderResponse</returns>
+            <response code="200">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+            <response code="404">The server can not find the requested resource.</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.GetAll">
+            <summary>
+            Gets a list of all orders
+            </summary>
+            <remarks>
+            Sample request:
+            GET /order/GetAll
+            </remarks>
+            <returns>Returns GetAllOrderResponse</returns>
+            <response code="200">Success</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.GetById(System.Guid)">
+            <summary>
+            Gets the order by ID
+            </summary>
+            <remarks>
+            Sample request:
+            GET /order/GetById/bd36fda0-37f4-4dd4-8cb0-c223847ef691
+            </remarks>
+            <param name="id">Order id (guid)</param>
+            <returns>Returns GetByIdOrderResponse</returns>
+            <response code="200">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+            <response code="404">The server can not find the requested resource.</response>
+        </member>
+        <member name="M:OrderManagement.API.Controllers.OrderController.GetByStatus(OrderManagement.Application.Enums.Status)">
+            <summary>
+            Get a list of orders by status
+            </summary>
+            <remarks>
+            Sample request:
+            GET /order/GetByStatus?status=Pending
+            </remarks>
+            <param name="status">Order status (enum)</param>
+            <returns>Returns GetByStatusOrderResponse</returns>
+            <response code="200">Success</response>
+            <response code="400">The server could not understand the request due to incorrect syntax</response>
+        </member>
+    </members>
+</doc>
