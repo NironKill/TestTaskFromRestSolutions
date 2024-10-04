@@ -14,7 +14,6 @@ namespace OrderManagement.Application.Repositories.Orders
 
         public OrderRepository(IApplicationDbContext context, ILogger<OrderRepository> logger) => _context = context;
 
-
         public async Task OrderHandling(string currencyRate, CancellationToken cancellationToken)
         {
             List<Order> listOrders = await _context.Order
