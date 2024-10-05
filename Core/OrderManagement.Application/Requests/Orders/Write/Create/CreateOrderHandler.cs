@@ -26,9 +26,10 @@ namespace OrderManagement.Application.Requests.Orders.Write.Create
             int status = default(int);
             string strStatus = string.Empty;
             decimal totalAmountInBaseCurrency = decimal.Zero;
+            decimal totalAmount = Math.Round(request.TotalAmount, 2, MidpointRounding.AwayFromZero);
             if (currency == Currency.USD)
             {
-                totalAmountInBaseCurrency = request.TotalAmount;
+                totalAmountInBaseCurrency = totalAmount;
                 priority = (int)totalAmountInBaseCurrency;
                 status = (int)Status.Processing;
                 strStatus = Status.Processing.ToString();
@@ -44,7 +45,7 @@ namespace OrderManagement.Application.Requests.Orders.Write.Create
             {
                 Id = Guid.NewGuid(),
                 CustomerName = request.CustomerName,
-                TotalAmount = request.TotalAmount,
+                TotalAmount = totalAmount,
                 Currency = (int)currency,
                 OrderDate = orderCreationTS,
                 Priority = priority,
@@ -60,7 +61,7 @@ namespace OrderManagement.Application.Requests.Orders.Write.Create
             {
                 Id = newOrder.Id,
                 CustomerName = request.CustomerName,
-                TotalAmount = request.TotalAmount,
+                TotalAmount = totalAmount,
                 Currency = currency.ToString(),
                 OrderDate = orderDate,
                 Priority = priority,

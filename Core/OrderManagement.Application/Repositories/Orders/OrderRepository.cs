@@ -60,7 +60,7 @@ namespace OrderManagement.Application.Repositories.Orders
                     if (minutesElapsed > 60)
                         hoursElapsed = minutesElapsed / 60;
 
-                    order.TotalAmountInBaseCurrency = (int)Math.Ceiling((double)order.TotalAmount / (double)currentCurrencyRate);
+                    order.TotalAmountInBaseCurrency = Math.Round((order.TotalAmount / currentCurrencyRate), 2, MidpointRounding.AwayFromZero);
 
                     order.Priority = (int)Math.Ceiling((double)order.TotalAmountInBaseCurrency + (double)addingPriorityEveryMinute + (double)hoursElapsed);
                     order.Status = (int)Status.Processing;
